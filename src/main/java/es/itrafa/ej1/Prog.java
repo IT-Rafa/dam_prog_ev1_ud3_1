@@ -41,8 +41,8 @@ import java.util.Scanner;
 public class Prog {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        double largo = sc.nextInt();
-        double alto = sc.nextInt();
+        int largo = sc.nextInt();
+        int alto = sc.nextInt();
 
         while (largo >= 0 && alto >= 0) {
 
