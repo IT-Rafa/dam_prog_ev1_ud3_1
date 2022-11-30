@@ -41,7 +41,13 @@ import java.util.Scanner;
  */
 public class Prog {
     public static void main(String[] args){
-        Console sc = System.console();
+        Scanner sc = new Scanner(System.in);
+
+        int personas = Integer.parseInt(sc.nextLine());
+        for (int i= 0; i < personas; i++){
+            String nombre = sc.nextLine();
+            System.out.println("Hola," + nombre.substring(nombre.indexOf(' ')));
+        }
 
     }
 }
