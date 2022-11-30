@@ -1,7 +1,5 @@
-package es.itrafa.ejercicios_sencillos.ej2;
+package es.itrafa.ejercicios_sencillos.ej1.main.java.es.itrafa.ejercicios_sencillos.ej2;
 
-import java.io.Console;
-import java.util.Scanner;
 
 /**
  * [fuente: aceptaelreto.com (117)]
@@ -39,6 +37,8 @@ import java.util.Scanner;
  * Hola, Aldonza.
  * Hola, Ender.
  */
+import java.util.Scanner;
+
 public class Prog {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
@@ -46,7 +46,7 @@ public class Prog {
         int personas = Integer.parseInt(sc.nextLine());
         for (int i= 0; i < personas; i++){
             String nombre = sc.nextLine();
-            System.out.println("Hola," + nombre.substring(nombre.indexOf(' ')));
+            System.out.println("Hola," + nombre.substring(nombre.indexOf(' ')) + ".");
         }
 
     }

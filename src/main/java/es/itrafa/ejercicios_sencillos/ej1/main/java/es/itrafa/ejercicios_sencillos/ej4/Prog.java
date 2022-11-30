@@ -1,6 +1,4 @@
-package es.itrafa.ejercicios_sencillos.ej4;
-
-import java.util.Scanner;
+package es.itrafa.ejercicios_sencillos.ej1.main.java.es.itrafa.ejercicios_sencillos.ej4;
 
 /**
  * [fuente: aceptaelreto.com (148)]
@@ -33,6 +31,7 @@ import java.util.Scanner;
  * 150
  * 1439
  */
+import java.util.Scanner;
 public class Prog {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

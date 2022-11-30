@@ -1,6 +1,5 @@
-package es.itrafa.ejercicios_sencillos.ej3;
+package es.itrafa.ejercicios_sencillos.ej1.main.java.es.itrafa.ejercicios_sencillos.ej3;
 
-import java.util.Scanner;
 
 /**
  * [fuente: aceptaelreto.com (313)]
@@ -39,6 +38,8 @@ import java.util.Scanner;
  * SI
  * NO
  */
+import java.util.Scanner;
+
 public class Prog {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);

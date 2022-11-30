@@ -1,4 +1,4 @@
-package es.itrafa.ejercicios_sencillos.ej6;
+package es.itrafa.ejercicios_sencillos.ej1.main.java.es.itrafa.ejercicios_sencillos.ej6;
 
 import java.util.Scanner;
 

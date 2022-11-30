@@ -1,4 +1,4 @@
-package es.itrafa.ej1;
+package es.itrafa.ejercicios_sencillos.ej1.main.java.es.itrafa.ej1;
 
 /**
  * Perímetro de un rectángulo

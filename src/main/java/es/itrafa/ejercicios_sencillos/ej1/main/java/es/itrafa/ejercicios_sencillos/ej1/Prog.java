@@ -1,4 +1,4 @@
-package es.itrafa.ejercicios_sencillos.ej1;
+package es.itrafa.ejercicios_sencillos.ej1.main.java.es.itrafa.ejercicios_sencillos.ej1;
 
 /**
  * [fuente: aceptaelreto.com (362)]

@@ -1,4 +1,4 @@
-package es.itrafa.ejercicios_sencillos.ej5;
+package es.itrafa.ejercicios_sencillos.ej1.main.java.es.itrafa.ejercicios_sencillos.ej5;
 
 import java.util.Scanner;
 import java.util.concurrent.LinkedBlockingDeque;

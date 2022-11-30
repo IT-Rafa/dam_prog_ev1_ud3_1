@@ -1,4 +1,4 @@
-package es.itrafa.ej3;
+package es.itrafa.ejercicios_sencillos.ej1.main.java.es.itrafa.ej3;
 
 /**
  * ¿Qué lado de la calle?
