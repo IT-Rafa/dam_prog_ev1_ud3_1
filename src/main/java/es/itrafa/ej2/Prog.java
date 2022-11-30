@@ -15,8 +15,8 @@ package es.itrafa.ej2;
  * Y quizá entonces, digamos que en la primera clase de cualquier curso en el que se explicara un lenguaje de
  * programación, se tenía que salir habiendo escrito "un hola mundo".
  * Y eso es lo que vamos a hacer. Escribir un programa que escriba tantos "hola mundo" como nos pidan.
- * Entrada
  *
+ * Entrada
  * La entrada consta de una única línea que contiene un número n, 05, que indica cuántos mensajes hay que emitir.
  * Salida
  *
