@@ -1,6 +1,7 @@
 package es.itrafa.ejercicios_sencillos.ej1.main.java.es.itrafa.ejercicios_sencillos.ej1;
 
 /**
+ * El día de Navidad (362)
  * [fuente: aceptaelreto.com (362)]
  * [cat: bucles simples]
  *

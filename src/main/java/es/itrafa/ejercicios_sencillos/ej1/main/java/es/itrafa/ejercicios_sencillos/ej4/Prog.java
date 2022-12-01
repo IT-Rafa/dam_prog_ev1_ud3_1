@@ -1,6 +1,7 @@
 package es.itrafa.ejercicios_sencillos.ej1.main.java.es.itrafa.ejercicios_sencillos.ej4;
 
 /**
+ * Nochevieja (148)
  * [fuente: aceptaelreto.com (148)]
  * [cat: bucles simples]
  * <p>
@@ -12,42 +13,45 @@ package es.itrafa.ejercicios_sencillos.ej1.main.java.es.itrafa.ejercicios_sencil
  * por las horas y los minutos separados por: y utilizando siempre dos dígitos.
  * Se utiliza una representación en formato 24 horas (es decir, desde 00:00 a 23:59).
  * La entrada termina cuando la hora es la medianoche (00:00), que no debe procesarse.
- * <p>
+ *
  * Salida
- * <p>
+ *
  * Para cada caso de prueba se mostrará una línea con el número de minutos que faltan para medianoche.
- * <p>
+ *
  * Por ejemplo:
  * Entrada
- * <p>
+ *
  * 23:45
  * 21:30
  * 00:01
  * 1
- * <p>
+ *
  * Resultado
- * <p>
+ *
  * 15
  * 150
  * 1439
  */
+
 import java.util.Scanner;
+
 public class Prog {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        String input;
-        int hora, min;
-        do {
-            input = sc.nextLine();
-            hora = Integer.parseInt(input.substring(0, input.indexOf(":")));
-            min = Integer.parseInt(input.substring(input.indexOf(":") + 1));
+
+        String input = sc.nextLine();
+
+        while (!input.equals("00:00")) {
+
+            int hora = Integer.parseInt(input.substring(0, input.indexOf(":")));
+            int min = Integer.parseInt(input.substring(input.indexOf(":") + 1));
 
             if ((hora >= 0 || hora < 24) && (min >= 0 || min < 60)) {
                 int hResult = (23 - hora) * 60;
                 int mResult = 60 - min;
                 System.out.println(hResult + mResult);
-
             }
-        } while (hora != 0 || min != 0);
+            input = sc.nextLine();
+        }
     }
 }

@@ -1,8 +1,9 @@
 package es.itrafa.ejercicios_sencillos.ej1.main.java.es.itrafa.ejercicios_sencillos.ej7;
 
-import java.util.Scanner;
 
 /**
+ * ¿Acaso hubo búhos acá?
+ * Tiempo máximo: 1,000 s
  * problema 252 de acepta el reto
  * https://www.aceptaelreto.com/problem/statement.php?id=252
  *
@@ -51,6 +52,8 @@ import java.util.Scanner;
  * NO
  * SI
  */
+import java.util.Scanner;
+
 public class Prog {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);

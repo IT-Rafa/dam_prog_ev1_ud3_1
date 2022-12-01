@@ -1,9 +1,7 @@
 package es.itrafa.ejercicios_sencillos.ej1.main.java.es.itrafa.ejercicios_sencillos.ej5;
 
-import java.util.Scanner;
-import java.util.concurrent.LinkedBlockingDeque;
-
 /**
+ * Polisílaba es polisílaba
  * [fuente: aceptaelreto.com (467)]
  * [cat: bucles simples]
  *
@@ -45,6 +43,9 @@ import java.util.concurrent.LinkedBlockingDeque;
  * TAUTOLOGIA
  * NO TAUTOLOGIA
  */
+
+import java.util.Scanner;
+
 public class Prog {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);

@@ -2,6 +2,7 @@ package es.itrafa.ejercicios_sencillos.ej1.main.java.es.itrafa.ejercicios_sencil
 
 
 /**
+ * Fin de mes (313)
  * [fuente: aceptaelreto.com (313)]
  * [cat: bucles simples]
  *

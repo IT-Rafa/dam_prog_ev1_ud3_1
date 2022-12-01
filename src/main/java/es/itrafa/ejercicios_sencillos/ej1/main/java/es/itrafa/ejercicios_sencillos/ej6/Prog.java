@@ -1,8 +1,8 @@
 package es.itrafa.ejercicios_sencillos.ej1.main.java.es.itrafa.ejercicios_sencillos.ej6;
 
-import java.util.Scanner;
 
 /**
+ * Cociendo huevos (368)
  * [fuente: aceptaelreto.com (368)]
  * [cat: bucles simples]
  * <p>
@@ -74,6 +74,8 @@ import java.util.Scanner;
  * 10
  * 20
  */
+import java.util.Scanner;
+
 public class Prog {
     public static void main(String[] args) {
         final int MINUTOSOLLA = 10;

@@ -2,6 +2,7 @@ package es.itrafa.ejercicios_sencillos.ej1.main.java.es.itrafa.ejercicios_sencil
 
 
 /**
+ * La fiesta aburrida (117)
  * [fuente: aceptaelreto.com (117)]
  * [cat: bucles simples]
  *
