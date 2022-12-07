@@ -50,17 +50,34 @@ import java.util.Scanner;
 public class Prog {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        String[] numbs = sc.nextLine().split(" ");
+        String[] line = sc.nextLine().split(" ");
 
-        while (!numbs[0].equals("0") || !numbs[1].equals("0")) {
-            int a = Integer.parseInt(numbs[0]);
-            int b = Integer.parseInt(numbs[1]);
-            for (int i= 0; i < numbs[0].length(); i++){
-                System.out.println(a%10);
-                a = a - (a%10) - 10;
+        while (!line[0].equals("0") || !line[1].equals("0")) {
+            int resto = 0;
+            int max = line[0].length();
+            if (max < line[1].length()) {
+                max = line[1].length();
             }
 
-            numbs = sc.nextLine().split(" ");
+            int a = Integer.parseInt(line[0]);
+            int b = Integer.parseInt(line[1]);
+
+            for (int i = 0; i < max; i++) {
+                int a1 = a % 10;
+                int b1 = b % 10;
+
+                if(a1 + b1 >= 10){
+                    resto++;
+                }
+
+                a = (a - a1) / 10;
+                b = (b - b1) / 10;
+
+            }
+
+            System.out.println(resto);
+            line = sc.nextLine().split(" ");
         }
+
     }
 }

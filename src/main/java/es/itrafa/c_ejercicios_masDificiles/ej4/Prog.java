@@ -1,5 +1,7 @@
 package es.itrafa.c_ejercicios_masDificiles.ej4;
 
+import java.util.Scanner;
+
 /**
  * [fuente: aceptaelreto.com (441)]
  * [cat: bucles simples]
@@ -16,7 +18,7 @@ package es.itrafa.c_ejercicios_masDificiles.ej4;
  * se puede sumar uno más a cualquier número"), ella no perdía la esperanza de que
  * finalmente se rindieran y confesaran que todo había sido una broma de mal gusto.
  *
- * Un año después, en clase de religión, encontró la incrongruencia que estaba buscando.
+ * Un año después, en clase de religión, encontró la incongruencia que estaba buscando.
  * Esta tarde, en cuanto llegara a su casa pillaría a su padre en un renuncio y le
  * obligaría a reconocer que, efectivamente, había un último número. La pregunta que le
  * haría resonaba en su mente...
@@ -57,6 +59,24 @@ package es.itrafa.c_ejercicios_masDificiles.ej4;
  */
 public class Prog {
     public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
 
+        String line = sc.nextLine();
+
+        while(!line.isEmpty()){
+            int add = 0;
+            if(line.charAt(line.length()-1) == '9'){
+                add = 1;
+
+            }
+            for(int i = line.length()-2; i >= 0; i--){
+
+                if(line.charAt(i) != '.'){
+                    System.out.println(line.charAt(i));
+                }
+
+            }
+            line = sc.nextLine();
+        }
     }
 }
