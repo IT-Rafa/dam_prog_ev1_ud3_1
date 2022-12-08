@@ -67,29 +67,33 @@ public class Prog {
             int add = 0;
 
             for (int i = line.length() - 1; i >= 0; i--) {
-                if(i == line.length() -1){
-                    if(line.charAt(i) == '9'){
+                if (i == line.length() - 1) {
+                    if (line.charAt(i) == '9') {
                         line.setCharAt(i, '0');
-                        if(i == 0){
+                        if (i == 0) {
                             line = new StringBuilder("0" + line);
                             i++;
 
                         }
                         add++;
 
-                    }else{
-                        line.setCharAt(i, (char)(line.charAt(i) +1));
+                    } else {
+                        line.setCharAt(i, (char) (line.charAt(i) + 1));
                     }
-                }else{
+                } else {
+                    if (line.charAt(i) != '.') {
+                        line.setCharAt(i, (char) (line.charAt(i) + add));
+                        add = 0;
+                    }
 
-                    line.setCharAt(i, (char)(line.charAt(i) +add));
-                    add = 0;
-                    if(line.charAt(i) == '9' +1){
+
+                    if (line.charAt(i) == '9' + 1) {
                         line.setCharAt(i, '0');
-                        if(i == 0){
-                            if(line.length() %3 == 0){
+
+                        if (i == 0) {
+                            if (line.length() % 3 == 0) {
                                 line = new StringBuilder("0." + line);
-                            }else{
+                            } else {
                                 line = new StringBuilder("0" + line);
                             }
 
