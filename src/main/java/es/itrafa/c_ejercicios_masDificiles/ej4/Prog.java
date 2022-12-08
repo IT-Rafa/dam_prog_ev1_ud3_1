@@ -62,45 +62,57 @@ public class Prog {
         Scanner sc = new Scanner(System.in);
 
         StringBuilder line = new StringBuilder(sc.nextLine());
-
+        // 1.234.568
+        // 012345678
         while (!line.isEmpty()) {
             int add = 0;
-
+            int j = 0;
             for (int i = line.length() - 1; i >= 0; i--) {
-                if (i == line.length() - 1) {
-                    if (line.charAt(i) == '9') {
-                        line.setCharAt(i, '0');
-                        if (i == 0) {
-                            line = new StringBuilder("0" + line);
-                            i++;
+                // Añade el punto cuando hace falta
+                if (j++ == 3 && i > 0) {
+                    j = 0;
+                    line.setCharAt(i, '.');
 
-                        }
-                        add++;
-
-                    } else {
-                        line.setCharAt(i, (char) (line.charAt(i) + 1));
-                    }
                 } else {
-                    if (line.charAt(i) != '.') {
-                        line.setCharAt(i, (char) (line.charAt(i) + add));
-                        add = 0;
-                    }
+                    // Sumamos 1 número al último del string
+                    if (i == line.length() - 1) {
 
-
-                    if (line.charAt(i) == '9' + 1) {
-                        line.setCharAt(i, '0');
-
-                        if (i == 0) {
-                            if (line.length() % 3 == 0) {
-                                line = new StringBuilder("0." + line);
-                            } else {
-                                line = new StringBuilder("0" + line);
+                        if (line.charAt(i) == '9') {
+                            line.setCharAt(i, '0');
+                            if (i == 0) {
+                                if(j == 3){
+                                    line = new StringBuilder("1." + line);
+                                }else{
+                                    line = new StringBuilder("1" + line);
+                                }
+                                i--;
                             }
-
-                            i++;
-
+                            add++;
+                        } else {
+                            line.setCharAt(i, (char) (line.charAt(i) + 1));
                         }
-                        add++;
+
+
+                    } else { // Resto String
+                        if (add > 0) {
+                            if (line.charAt(i) == '9') {
+                                line.setCharAt(i, '0');
+                                if (i == 0) {
+                                    if(j == 3){
+                                        line = new StringBuilder("1." + line);
+                                    }else{
+                                        line = new StringBuilder("1" + line);
+                                    }
+                                    i--;
+                                }
+
+
+                            } else {
+                                line.setCharAt(i, (char) (line.charAt(i) + 1));
+                                add = 0;
+                            }
+                        }
+
                     }
                 }
             }
