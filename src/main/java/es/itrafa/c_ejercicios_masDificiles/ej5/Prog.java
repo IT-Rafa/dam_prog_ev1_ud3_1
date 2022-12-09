@@ -1,6 +1,6 @@
 package es.itrafa.c_ejercicios_masDificiles.ej5;
 
-import java.util.Scanner;
+
 
 /**
  * [fuente: aceptaelreto.com (371)]
@@ -52,6 +52,7 @@ import java.util.Scanner;
  * 9
  * 3
  */
+import java.util.Scanner;
 public class Prog {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

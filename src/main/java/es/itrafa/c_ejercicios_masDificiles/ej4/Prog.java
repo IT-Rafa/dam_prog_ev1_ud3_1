@@ -1,7 +1,5 @@
 package es.itrafa.c_ejercicios_masDificiles.ej4;
 
-import java.util.Scanner;
-
 /**
  * [fuente: aceptaelreto.com (441)]
  * [cat: bucles simples]
@@ -57,6 +55,7 @@ import java.util.Scanner;
  * 1.346
  * 1.234.568
  */
+import java.util.Scanner;
 public class Prog {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

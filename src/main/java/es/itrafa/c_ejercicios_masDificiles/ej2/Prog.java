@@ -1,6 +1,6 @@
 package es.itrafa.c_ejercicios_masDificiles.ej2;
 
-import java.util.Scanner;
+
 
 /**
  * [fuente: aceptaelreto.com (124)]
@@ -47,6 +47,7 @@ import java.util.Scanner;
  * 3
  * 1
  */
+import java.util.Scanner;
 public class Prog {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -59,12 +60,12 @@ public class Prog {
                 max = line[1].length();
             }
 
-            int a = Integer.parseInt(line[0]);
-            int b = Integer.parseInt(line[1]);
+            long a = Long.parseLong(line[0]);
+            long b = Long.parseLong(line[1]);
 
             for (int i = 0; i < max; i++) {
-                int a1 = a % 10;
-                int b1 = b % 10;
+                long a1 = a % 10;
+                long b1 = b % 10;
 
                 if(a1 + b1 >= 10){
                     resto++;

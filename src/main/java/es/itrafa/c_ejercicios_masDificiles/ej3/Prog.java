@@ -1,6 +1,6 @@
 package es.itrafa.c_ejercicios_masDificiles.ej3;
 
-import java.util.Scanner;
+
 
 /**
  * EL ASCENSOR
@@ -47,6 +47,7 @@ import java.util.Scanner;
  * 1
  * 4
  */
+import java.util.Scanner;
 public class Prog {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
