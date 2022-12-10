@@ -1,7 +1,6 @@
 package es.itrafa.c_ejercicios_masDificiles.ej2;
 
 
-
 /**
  * [fuente: aceptaelreto.com (124)]
  * [cat: bucles simples]
@@ -39,6 +38,7 @@ package es.itrafa.c_ejercicios_masDificiles.ej2;
  * 123 456
  * 555 555
  * 123 594
+ * 99999999999999999999999999999999999 1
  * 0 0
  * <p>
  * Resultado
@@ -46,37 +46,69 @@ package es.itrafa.c_ejercicios_masDificiles.ej2;
  * 0
  * 3
  * 1
+ * 35
  */
+
 import java.util.Scanner;
+
 public class Prog {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+
+        // Cogemos entrada (primer input)
         String[] line = sc.nextLine().split(" ");
 
+        // Repetimos hasta que ambos valores sean 0
         while (!line[0].equals("0") || !line[1].equals("0")) {
+            // Variables a aumentar si hay resto
             int resto = 0;
+            int add = 0;
+
+            // Hallamos linea con más longitud
             int max = line[0].length();
-            if (max < line[1].length()) {
+            if (line[0].length() < line[1].length()) {
                 max = line[1].length();
             }
 
-            long a = Long.parseLong(line[0]);
-            long b = Long.parseLong(line[1]);
-
+            // Recorremos string largo
             for (int i = 0; i < max; i++) {
-                long a1 = a % 10;
-                long b1 = b % 10;
+                // números a comparar
+                int numA = 0;
+                int numB = 0;
 
-                if(a1 + b1 >= 10){
-                    resto++;
+                // Si existe, cogemos el dígito de 1º número (fin String hacia 0)
+                if (line[0].length() - 1 - i >= 0) {
+                    numA = Integer.parseInt(String.valueOf(line[0].charAt(line[0].length() - 1 - i)));
+                }
+                // Si existe, cogemos el dígito de 2º número (fin String hacia 0)
+                if (line[1].length() - 1 - i >= 0) {
+                    numB = Integer.parseInt(String.valueOf(line[1].charAt(line[1].length() - 1 - i)));
                 }
 
-                a = (a - a1) / 10;
-                b = (b - b1) / 10;
+                // Mostramos cálculo (solo pruebas)
+                // System.out.println("line " + i + ": " + numA + " + " + numB + " + " + add + " = " + (numA + numB + add));
+
+                // Sumamos valor ambos números + resto y vemos si resto continua
+                if (numA + numB + add > 9) {
+                    // System.out.println("añade resto");
+                    resto++;
+                    add = 1;
+
+                } else {
+                    // Resto no continua
+                    add = 0;
+
+                    // Comprobamos que si es el primer número de algún valor, ya no se seguirá restando
+                    if (line[0].length() - i <= 0 || line[1].length() - i <= 0) {
+                        break;
+                    }
+                }
 
             }
-
+            // Mostramos valor
             System.out.println(resto);
+
+            // Cogemos entrada
             line = sc.nextLine().split(" ");
         }
 

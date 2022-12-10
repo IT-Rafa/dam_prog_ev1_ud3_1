@@ -60,10 +60,11 @@ public class Prog {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        StringBuilder line = new StringBuilder(sc.nextLine());
+        StringBuilder line;
         // 1.234.568
         // 012345678
-        while (!line.isEmpty()) {
+        while (sc.hasNextLine()) {
+            line = new StringBuilder(sc.nextLine());
             int add = 0;
             int j = 0;
             for (int i = line.length() - 1; i >= 0; i--) {
@@ -116,7 +117,6 @@ public class Prog {
                 }
             }
             System.out.println(line);
-            line = new StringBuilder(sc.nextLine());
         }
     }
 }
